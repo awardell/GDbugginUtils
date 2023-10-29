@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b06ud7f6fchgk"]
+
+[sub_resource type="GDScript" id="GDScript_f1fd6"]
+script/source = "extends Node
+
+
+func _input(event: InputEvent) -> void:
+	var kevent := event as InputEventKey
+	if is_instance_valid(kevent) && kevent.is_pressed():
+		print(\"EnumStrings.Key[keycode]:       \", EnumStrings.Key[kevent.keycode])
+		print(\"OS.get_keycode_string(keycode): \", OS.get_keycode_string(kevent.keycode))
+"
+
+[node name="EnumStringsKey" type="Node"]
+script = SubResource("GDScript_f1fd6")

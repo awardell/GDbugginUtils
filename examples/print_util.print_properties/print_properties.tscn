@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvjsdl13cuaur"]
+
+[ext_resource type="Script" path="res://examples/print_util.print_properties/print_properties.gd" id="1_4iuon"]
+[ext_resource type="Shader" path="res://examples/print_util.print_properties/many_uniforms.gdshader" id="2_gn8jw"]
+
+[node name="root" type="Node"]
+
+[node name="UniqueNodeName" type="Node" parent="." node_paths=PackedStringArray("node")]
+unique_name_in_owner = true
+script = ExtResource("1_4iuon")
+resource = ExtResource("2_gn8jw")
+node = NodePath(".")
+shader = ExtResource("2_gn8jw")
